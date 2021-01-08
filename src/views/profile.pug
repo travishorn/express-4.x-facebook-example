@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  img.profile(alt=user.displayName src=user.photos[0].value)
+  
+  table
+    tbody
+      tr
+        th Google ID
+        td= user.id
+      tr
+        th Display name
+        td= user.displayName
+      tr
+        th Family name
+        td= user.name.familyName
+      tr
+        th Given name
+        td= user.name.givenName
+      tr
+        th Email
+        td
+          a(href=`mailto:${user.emails[0].value}`)= user.emails[0].value

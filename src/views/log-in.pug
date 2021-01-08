@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  if state
+    p You must be logged in to view that page
+    a.btn(href=`/log-in/google?state=${state}`) Log in with your Google account
+  else
+    a.btn(href=`/log-in/google`) Log in with your Google account
